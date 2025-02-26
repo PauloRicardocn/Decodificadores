@@ -1,37 +1,48 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const menuItems = document.querySelectorAll(".menu-item");
-    const headerTitle = document.getElementById("header-title");
-    const content = document.getElementById("content");
+    // Sidebar
+    const menuItemsSidebar = document.querySelectorAll(".menu-item");
+    const contentSidebar = document.getElementById("content");
 
-    menuItems.forEach(item => {
+    menuItemsSidebar.forEach(item => {
         item.addEventListener("click", function(event) {
             event.preventDefault();
             const page = event.target.getAttribute("data-page");
-            updateContent(page);
+            updateContentSidebar(page);
         });
     });
 
-    function updateContent(page) {
+    function updateContentSidebar(page) {
         switch(page) {
-            case "home":
-                headerTitle.textContent = "Página Inicial";
-                content.innerHTML = "<h2>Bem-vindo à Página Inicial</h2><p>Conteúdo da página inicial.</p>";
+            case "decodificador2x4":
+                contentSidebar.innerHTML = "<h2>Bem-vindo à Página do Decodificador 2:4</h2>";
                 break;
-            case "about":
-                headerTitle.textContent = "Sobre";
-                content.innerHTML = "<h2>Sobre nós</h2><p>Conteúdo sobre a empresa.</p>";
-                break;
-            case "services":
-                headerTitle.textContent = "Serviços";
-                content.innerHTML = "<h2>Serviços</h2><p>Conteúdo sobre os serviços oferecidos.</p>";
-                break;
-            case "contact":
-                headerTitle.textContent = "Contato";
-                content.innerHTML = "<h2>Entre em Contato</h2><p>Conteúdo de contato.</p>";
+            case "decodificador3x8":
+                contentSidebar.innerHTML = "<h2>Bem-vindo à Página do Decodificador 3:8</h2>";
                 break;
             default:
-                headerTitle.textContent = "Página Inicial";
-                content.innerHTML = "<h2>Bem-vindo à Página Inicial</h2><p>Conteúdo da página inicial.</p>";
+                contentSidebar.innerHTML = "<h2>Bem-vindo à Página Inicial</h2><p>Conteúdo da página inicial.</p>";
+        }
+    }
+
+    // Header
+    const menuItemsHeader = document.querySelectorAll(".menu-item-header");
+    const contentHeader = document.getElementById("menu-item-header");
+
+    menuItemsHeader.forEach(item => {
+        item.addEventListener("click", function(event) {
+            event.preventDefault();
+            const page = event.target.getAttribute("data-page");
+            updateContentHeader(page);
+        });
+    });
+
+    function updateContentHeader(page) {
+        switch(page) {
+            case "decodificador":
+                contentHeader.innerHTML = "<h2>Bem-vindo à Página do Decodificador 2:4</h2>";
+                break;
+            default:
+                contentHeader.innerHTML = "<h2>Bem-vindo à Página do Decodificador 2:4</h2>";
         }
     }
 });

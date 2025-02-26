@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-y: hidden;
 }
 
 body {
@@ -19,33 +21,45 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #1F4514;
+    background-color: #e2e2e2;
     display: flex;
     justify-content: center;
-    color: #ecf0f1;
     padding-top: 20px;
-    height: 100vh;
+    height: 88vh;
+}
+
+.sidebar-bottom {
+    width: 250px;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    height: 12vh;
 }
 
 .sidebar ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar ul li a {
     display: block;
-    color: #ecf0f1;
+    color: rgb(0, 0, 0);
     padding: 15px;
+    text-align: center;
+    justify-content: center;
     text-decoration: none;
     transition: background-color 0.3s;
+    height: 40px;
+    width: 240px;
+    border-radius: 8px;
+    margin-bottom: 5px;
 }
 
 .sidebar ul li a:hover {
-    display: flex;
-    align-items: center;
-    background-color: #34495e;
-    border-radius: 8px;
-    width: 240px;
-    height: 40px;
+    background-color: #a1a1a1;
 }
 
 .main-content {
@@ -55,11 +69,31 @@ body {
 }
 
 header {
-    background-color: #238505;
+    background-color: #b40d0d;
+    display: flex;
+    align-items: center;
+    justify-content: end;
     color: white;
     padding: 15px;
     text-align: end;
     font-size: 1.0rem;
+    height: 60px;
+}
+
+.menu-item-header {
+    display: flex;
+    color: white;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 180px;
+    height: 30px;
+    padding: 20px;
+}
+
+.menu-item-header:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra simples */
 }
 
 .content {
