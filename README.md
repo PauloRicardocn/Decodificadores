@@ -1,4 +1,4 @@
-Decodificadores de 2 para 4 e 3 para 8
+*Decodificadores de 2 para 4 e 3 para 8*
 Este repositório contém a implementação de dois decodificadores digitais interativos: um Decodificador de 2 para 4 e um Decodificador de 3 para 8. O projeto foi desenvolvido utilizando HTML, CSS e JavaScript, com o objetivo de simular o funcionamento de circuitos lógicos de forma visual e interativa.
 
 🚀 Funcionalidades
