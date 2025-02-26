@@ -1,36 +1,127 @@
-/* styles.css */
+/* Reset e Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Sidebar (se aplicável) */
+.sidebar {
+    width: 24vh;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    height: 87vh;
+}
+
+.sidebar-bottom {
+    width: 24vh;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-top: 20px;
+    height: 7vh;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 15px;
     text-align: center;
-    position: relative;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    height: 40px;
+    width: 240px;
+    border-radius: 8px;
+    margin-bottom: 5px;
 }
 
-/* Contêiner principal para input e output */
+.sidebar ul li a:hover {
+    background-color: #a1a1a1;
+}
+
+/* Estilos do Contêiner Principal */
+.main-content {
+    display: flex;
+    width: calc(100% - 24vh);
+    flex-direction: column;
+}
+
+header {
+    background-color: #b40d0d;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: white;
+    padding: 15px;
+    text-align: end;
+    font-size: 1.0rem;
+    height: 6vh;
+}
+
+.menu-item-header {
+    display: flex;
+    color: white;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 180px;
+    height: 30px;
+    padding: 20px;
+}
+
+.menu-item-header:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    padding: 20px;
+    background-color: white;
+    flex-grow: 1;
+}
+
+/* Contêiner para input e output */
 .input_Output {
-    display: flex; /* Coloca input e output lado a lado */
-    justify-content: space-between; /* Espaço entre input e output */
-    gap: 20px; /* Espaçamento entre input e output */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* Estilo para o contêiner de input */
+/* Inputs */
 .inputs {
     display: flex;
-    flex-direction: column; /* Organiza os botões em coluna */
-    align-items: center; /* Centraliza os botões horizontalmente */
-    gap: 50px; /* Espaçamento entre os botões */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     margin-top: 50px;
 }
 
@@ -41,19 +132,24 @@ body {
     background-color: #007bff;
     color: white;
     cursor: pointer;
-    width: 100px; /* Largura fixa para os botões */
+    width: 100px;
+    transition: background-color 0.3s;
+}
+
+.inputs button:hover {
+    background-color: #0056b3;
 }
 
 .inputs button.active {
     background-color: #0056b3;
 }
 
-/* Estilo para o contêiner de output */
+/* Outputs */
 .outputs {
     display: flex;
-    flex-direction: column; /* Organiza as luzes em coluna */
-    align-items: center; /* Centraliza as luzes horizontalmente */
-    gap: 10px; /* Espaçamento entre as luzes */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .light {
@@ -65,9 +161,47 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 14px;
+    transition: background-color 0.3s;
 }
 
 .light.active {
     background-color: yellow;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding-top: 0px;
+    }
+
+    .sidebar-bottom {
+        width: 0vh;
+        height: 0vh;
+    }
+
+    .main-content {
+        width: 100%;
+        height: 86vh;
+    }
+
+    .principal-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sidebar {
+        align-items: center;
+        justify-content: center;
+        height: 8vh;
+    }
+
+    .sidebar ul {
+        flex-direction: row;
+    }
+
+    .sidebar ul li a {
+        width: auto;
+    }
+}

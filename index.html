@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Responsiva</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components.css">
+</head> 
+<body>
+    <div class="wrapper">
+        <header>
+            <ul>
+                <li>
+                    <a href="#" class="menu-item-header" data-page="decodificador">Decodificador</a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="principal-container">
+            <div style="display: flex; flex-direction: column;">
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                            <a href="#" class="menu-item" data-page="decodificador2x4">Decodificador (2:4)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item" data-page="decodificador3x8">Decodificador (3:8)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-bottom">
+                    <div class="line"></div>
+                    <h4 style="display: flex; margin-bottom: 10px;">Tipos de Demux</h6>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="content" id="content">
+                    <h2>Bem-vindo à Página Inicial</h2>
+                    <p>Conteúdo da página inicial.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
