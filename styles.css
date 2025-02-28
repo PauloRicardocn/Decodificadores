@@ -1,9 +1,11 @@
+/* Estilos globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     overflow-y: hidden;
+    overflow-x: hidden; /* Remove barra de rolagem horizontal */
 }
 
 body {
@@ -19,6 +21,7 @@ body {
     width: 100%;
 }
 
+/* Sidebar */
 .sidebar {
     width: 24vh;
     background-color: #e2e2e2;
@@ -52,7 +55,7 @@ body {
     text-align: center;
     justify-content: center;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
     height: 40px;
     width: 240px;
     border-radius: 8px;
@@ -61,6 +64,8 @@ body {
 
 .sidebar ul li a:hover {
     background-color: #a1a1a1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-content {
@@ -69,28 +74,49 @@ body {
     flex-direction: column;
 }
 
+/* Header atualizado */
 header {
-    background-color: #b40d0d;
+    background: linear-gradient(135deg, #8e0e00, #1f1c18);
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     color: white;
-    padding: 15px;
-    text-align: end;
-    font-size: 1.0rem;
-    height: 6vh;
+    padding: 15px 30px;
+    height: 8vh;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .menu-item-header {
     display: flex;
-    color: white;
-    font-size: large;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
     text-decoration: none;
-    width: 180px;
-    height: 30px;
-    padding: 20px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-item-header:hover {
+    color: #ffd700;
+}
+
+.menu-item-header::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffd700;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.menu-item-header:hover::after {
+    width: 100%;
 }
 
 .principal-container {
@@ -99,7 +125,7 @@ header {
 }
 
 .menu-item-header:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra simples */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .content {
@@ -142,5 +168,11 @@ header {
 
     .sidebar ul li a {
         width: auto;
+    }
+
+    header {
+        justify-content: center;
+        text-align: center;
+        height: 10vh;
     }
 }
