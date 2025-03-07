@@ -2,6 +2,7 @@
 const inputA = document.getElementById('inputA');
 const inputB = document.getElementById('inputB');
 const inputC = document.getElementById('inputC');
+const circuitImage = document.getElementById('circuitImage');
 
 const luzes = {
     S0: document.getElementById('S0'),
@@ -13,7 +14,6 @@ const luzes = {
     S6: document.getElementById('S6'),
     S7: document.getElementById('S7')
 };
-
 
 let A = 0;
 let B = 0;
@@ -37,10 +37,28 @@ inputC.addEventListener('click', () => {
     updateCircuit();
 });
 
-
 function updateCircuit() {
     // Resetar todas as luzes
     Object.values(luzes).forEach(light => light.classList.remove('active'));
+
+    // Criar a chave binária (exemplo: "010")
+    const key = `${A}${B}${C}`;
+
+    // Tabela de mapeamento de imagens
+    const imageMap = {
+        "000": "images/saida_000.png",
+        "001": "images/saida_001.png",
+        "010": "images/saida_010.png",
+        "011": "images/saida_011.png",
+        "100": "images/saida_100.png",
+        "101": "images/saida_101.png",
+        "110": "images/saida_110.png",
+        "111": "images/saida_111.png"
+    };
+
+    // Atualiza a imagem do circuito
+    circuitImage.src = imageMap[key];
+
 
     if (A === 0  && B===0 && C=== 0) {
         luzes.S0.classList.add('active')
@@ -51,7 +69,6 @@ function updateCircuit() {
     const notA = A === 0 ? 1 : 0;
     const notB = B === 0 ? 1 : 0;
     const notC = C === 0 ? 1 : 0;
-
 
     const S0 = notA && notB && notC ? 1 : 0;
     const S1 = notA && notB && C ? 1 : 0;
@@ -71,5 +88,4 @@ function updateCircuit() {
     if (S5) luzes.S5.classList.add('active');
     if (S6) luzes.S6.classList.add('active');
     if (S7) luzes.S7.classList.add('active');
-
 }

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador 3 para 8 com Portas Lógicas</title>
-    <link rel="stylesheet" href="./styles 2.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,15 +14,17 @@
         <div class="input_Output">
             <!-- Entradas -->
             <div class="inputs">
-                <button id="inputA">A: 0</button>
-                <button id="inputB">B: 0</button>
                 <button id="inputC">C: 0</button>
+                <button id="inputB">B: 0</button>
+                <button id="inputA">A: 0</button>
+            </div>
 
-
+            <div class="circuit-output">
+                <img src="images/saida_000.png" id="circuitImage" class="circuit-output">
             </div>
 
             <!-- Saídas (Luzes) -->
-                <div class="outputs">
+            <div class="outputs">
                 <div class="light" id="S0">S0</div>
                 <div class="light" id="S1">S1</div>
                 <div class="light" id="S2">S2</div>
@@ -35,4 +38,5 @@
         </div>
     
     </div>
-    <script src="script 2.js"></script>
+</body>
+    

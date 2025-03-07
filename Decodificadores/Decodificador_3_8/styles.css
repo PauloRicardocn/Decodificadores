@@ -21,8 +21,7 @@ body {
 /* Contêiner principal para input e output */
 .input_Output {
     display: flex; /* Coloca input e output lado a lado */
-    justify-content: space-between; /* Espaço entre input e output */
-    gap: 20px; /* Espaçamento entre input e output */
+    justify-content: center; /* Espaço entre input e output */
 }
 
 /* Estilo para o contêiner de input */
@@ -30,8 +29,8 @@ body {
     display: flex;
     flex-direction: column; /* Organiza os botões em coluna */
     align-items: center; /* Centraliza os botões horizontalmente */
-    gap: 50px; /* Espaçamento entre os botões */
-    margin-top: 50px;
+    gap: 40px; /* Espaçamento entre os botões */
+    margin-top: 90px;
 }
 
 .inputs button {
@@ -41,7 +40,8 @@ body {
     background-color: #007bff;
     color: white;
     cursor: pointer;
-    width: 100px; /* Largura fixa para os botões */
+    width: 70px; /* Largura fixa para os botões */
+    
 }
 
 .inputs button.active {
@@ -57,8 +57,8 @@ body {
 }
 
 .light {
-    width: 50px;
-    height: 50px;
+    width: 47px;
+    height: 47px;
     border-radius: 50%;
     background-color: #ccc;
     display: flex;
@@ -69,4 +69,10 @@ body {
 
 .light.active {
     background-color: yellow;
+}
+
+.circuit-output {
+    width: 350px; /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
 }
