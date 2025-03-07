@@ -24,6 +24,10 @@
 
         <div class="principal-container">
             <div>
+                <div class="sidebar-bottom">
+                    <div class="line"></div>
+                    <h4>Tipos de Demux</h4>
+                </div>
                 <div class="sidebar">
                     <ul>
                         <li><a href="#" onclick="loadDecodificador('Decodificadores/Decodificador_2_4/index.html')">Decodificador (2:4)</a></li>
@@ -33,10 +37,7 @@
                     </ul>
                 </div>
 
-                <div class="sidebar-bottom">
-                    <div class="line"></div>
-                    <h4 style="display: flex; margin-bottom: 10px;">Tipos de Demux</h4>
-                </div>
+                
             </div>
 
             <div class="main-content">
@@ -70,18 +71,10 @@
 
         function getDecoderText(page) {
             const texts = {
-                "Decodificadores/Decodificador_2_4/index.html": `<h2 style='color: #b40d0d; text-align: center;'>Decodificador 2 para 4</h2>
-                    <p style='color: #333; font-size: 18px;'>O decodificador <b>2 para 4</b> recebe <b>dois bits</b> de entrada e ativa uma das <b>quatro saídas</b> possíveis. 
-                    Ele é utilizado em circuitos eletrônicos para ativar diferentes componentes com base em combinações binárias.</p>` ,
-                "Decodificadores/Decodificador_2_4_enable/index.html": `<h2 style='color: #b40d0d; text-align: center;'>Decodificador 2 para 4 com Enable</h2>
-                    <p style='color: #333; font-size: 18px;'>Este decodificador inclui um terceiro sinal chamado <b>Enable (E)</b>. Quando E está desativado, 
-                    todas as saídas ficam desligadas, proporcionando maior controle sobre o circuito.</p>` ,
-                "Decodificadores/Decodificador_3_8/index.html": `<h2 style='color: #b40d0d; text-align: center;'>Decodificador 3 para 8</h2>
-                    <p style='color: #333; font-size: 18px;'>O decodificador <b>3 para 8</b> recebe <b>três bits</b> de entrada e pode ativar uma entre <b>oito saídas</b>. 
-                    Ele é usado em sistemas de endereçamento de memória e controle de multiplexadores.</p>` ,
-                "Decodificadores/Decodificador_3_8_enable/index.html": `<h2 style='color: #b40d0d; text-align: center;'>Decodificador 3 para 8 com Enable</h2>
-                    <p style='color: #333; font-size: 18px;'>Esse modelo funciona como o decodificador 3 para 8, mas inclui um <b>Enable (E)</b> para ativação/desativação. 
-                    Isso permite maior flexibilidade no controle de circuitos digitais.</p>`
+                "Decodificadores/Decodificador_2_4/index.html": '' ,
+                "Decodificadores/Decodificador_2_4_enable/index.html": '' ,
+                "Decodificadores/Decodificador_3_8/index.html": `` ,
+                "Decodificadores/Decodificador_3_8_enable/index.html": ``
             };
             return texts[page] || "";
         }

@@ -11,11 +11,21 @@ body {
 
 .container {
     background-color: #fff;
-    padding: 20px;
+    width: 850px;
+    padding: 40px 40px;
+    align-items: center;
+    display: flex;
+    gap: 14px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
     position: relative;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #b40d0d;
 }
 
 /* Contêiner principal para input e output */
@@ -60,11 +70,11 @@ body {
 
 /* Estilo para o contêiner de output */
 .outputs {
-    margin-top: 30px;
     display: flex;
     flex-direction: column; /* Organiza as luzes em coluna */
-    align-items: center; /* Centraliza as luzes horizontalmente */
-    gap: 40px; /* Espaçamento entre as luzes */
+    margin-top: 20px;
+    justify-content: center;
+    gap: 50px; /* Espaçamento entre as luzes */
 }
 
 .light {
@@ -83,7 +93,7 @@ body {
 }
 
 .circuit-output img {
-    width: 450px;  
+    max-width: 100%;  
     height: auto; 
     display: block;
 }

@@ -5,17 +5,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
 .container {
     background-color: #fff;
-    padding: 20px;
+    width: 1000px;
+    padding: 40px 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: justify;
+    align-items: center;
     position: relative;
+    display: flex;
+    gap: 14px;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #b40d0d
 }
 
 /* Contêiner principal para input e output */
@@ -51,7 +61,8 @@ body {
     display: flex;
     flex-direction: column; /* Organiza as luzes em coluna */
     align-items: center; /* Centraliza as luzes horizontalmente */
-    gap: 40px; /* Espaçamento entre as luzes */
+    justify-content: center;
+    gap: 65px; /* Espaçamento entre as luzes */
 }
 
 .light {
@@ -70,7 +81,29 @@ body {
 }
 
 .circuit-output img {
-    width: 450px;  
+    max-width: 100%;  
     height: auto; 
     display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .input_Output {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .outputs {
+        gap: 10px;
+    }
+
+    .light {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
 }
