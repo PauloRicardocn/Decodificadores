@@ -1,60 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Decodificadores</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificadores</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <script defer src="script.js"></script>
-        <link rel="stylesheet" href="./Decodificadores/components.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./Decodificadores/components.css">
+</head>
+<body onload="loadHome()">
+    <div class="wrapper">
+        <header>
+            <ul>
+                <li>
+                    <a href="#" class="menu-item-header" onclick="loadHome()">Decodificador</a>
+                </li>
+            </ul>
+        </header>
 
-    </head> 
-    <body>
-        <div class="wrapper">
-            <header>
-                <ul>
-                    <li>
-                        <a href="#" class="menu-item-header" data-page="decodificador">Decodificador</a>
-                    </li>
-                </ul>
-            </header>
-            
-            <div class="principal-container">
-                <div>
-                    <div class="sidebar">
-                        <ul>
-                            <li>
-                                <a href="./Decodificadores/Decodificador_2:4/index.html">Decodificador (2:4)</a>
-                            </li>
-                            <li>
-                                <a href="./Decodificadores/Decodificador_2:4_enable/index.html">Decodificador (2:4) Enable</a>
-                            </li>
-                            <li>
-                                <a href="./Decodificadores/Decodificador_3:8/index.html" class="menu-item">Decodificador (3:8)</a>
-                            </li>
-                            <li>
-                                <a href="./Decodificadores/Decodificador_3:8_enable/index.html" class="menu-item">Decodificador (3:8) Enable</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-bottom">
-                        <div class="line"></div>
-                        <h4 style="display: flex; margin-bottom: 10px;">Tipos de Demux</h6>
-                    </div>
+        <div class="principal-container">
+            <div>
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#" onclick="loadDecodificador('Decodificadores/Decodificador_2_4/index.html')">Decodificador (2:4)</a></li>
+                        <li><a href="#" onclick="loadDecodificador('Decodificadores/Decodificador_2_4_enable/index.html')">Decodificador (2:4) Enable</a></li>
+                        <li><a href="#" onclick="loadDecodificador('Decodificadores/Decodificador_3_8/index.html')">Decodificador (3:8)</a></li>
+                        <li><a href="#" onclick="loadDecodificador('Decodificadores/Decodificador_3_8_enable/index.html')">Decodificador (3:8) Enable</a></li>
+                    </ul>
                 </div>
 
-                <div class="main-content">
-                    <div class="content" id="content">
-                        <h2>Bem-vindo à Página Inicial</h2>
-                        <p>Escolha um decodificador ao lado para testar.</p>
-                    </div>
+                <div class="sidebar-bottom">
+                    <div class="line"></div>
+                    <h4 style="display: flex; margin-bottom: 10px;">Tipos de Demux</h4>
                 </div>
             </div>
+
+            <div class="main-content">
+                <div id="info-container" style="padding: 20px; font-family: Arial, sans-serif;"></div>
+                <iframe id="decodificador-frame" src="" style="width: 100%; height: 90vh; border: none;"></iframe>
+            </div>
         </div>
-    </body>
+    </div>
+
+    <script>
+        function loadDecodificador(page) {
+            document.getElementById('decodificador-frame').src = page;
+            document.getElementById('info-container').innerHTML = getDecoderText(page);
+        }
+
+        function loadHome() {
+            document.getElementById('decodificador-frame').src = "";
+            document.getElementById('info-container').innerHTML = `<div style="text-align: center; padding: 20px; font-family: Arial, sans-serif;">
+                <h2 style="color: #b40d0d;">Bem-vindo ao Simulador de Decodificadores!</h2>
+                <p style="color: #333; font-size: 18px; max-width: 700px; margin: 0 auto;">
+                    Este projeto apresenta uma forma interativa de aprender sobre <b>decodificadores digitais</b>. 
+                    Os decodificadores são circuitos lógicos que transformam códigos binários em saídas específicas, 
+                    sendo amplamente utilizados em sistemas eletrônicos, como computadores e circuitos digitais.
+                </p>
+                <p style="color: #333; font-size: 18px; max-width: 700px; margin: 20px auto;">
+                    No menu ao lado, você pode selecionar diferentes tipos de decodificadores para visualizar seu funcionamento. 
+                    Teste os botões de entrada e veja como as saídas mudam conforme o código binário fornecido!
+                </p>
+            </div>`;
+        }
+
+        function getDecoderText(page) {
+            const texts = {
+                "Decodificadores/Decodificador_2_4/index.html": `<h2 style='color: #b40d0d; text-align: center;'>Decodificador 2 para 4</h2>
+                    <p style='color: #333; font-size: 18px;'>O decodificador <b>2 para 4</b> recebe <b>dois bits</b> de entrada e ativa uma das <b>quatro saídas</b> possíveis. 
+                    Ele é utilizado em circuitos eletrônicos para ativar diferentes componentes com base em combinações binárias.</p>` ,
+                "Decodificadores/Decodificador_2_4_enable/index.html": `<h2 style='color: #b40d0d; text-align: center;'>Decodificador 2 para 4 com Enable</h2>
+                    <p style='color: #333; font-size: 18px;'>Este decodificador inclui um terceiro sinal chamado <b>Enable (E)</b>. Quando E está desativado, 
+                    todas as saídas ficam desligadas, proporcionando maior controle sobre o circuito.</p>` ,
+                "Decodificadores/Decodificador_3_8/index.html": `<h2 style='color: #b40d0d; text-align: center;'>Decodificador 3 para 8</h2>
+                    <p style='color: #333; font-size: 18px;'>O decodificador <b>3 para 8</b> recebe <b>três bits</b> de entrada e pode ativar uma entre <b>oito saídas</b>. 
+                    Ele é usado em sistemas de endereçamento de memória e controle de multiplexadores.</p>` ,
+                "Decodificadores/Decodificador_3_8_enable/index.html": `<h2 style='color: #b40d0d; text-align: center;'>Decodificador 3 para 8 com Enable</h2>
+                    <p style='color: #333; font-size: 18px;'>Esse modelo funciona como o decodificador 3 para 8, mas inclui um <b>Enable (E)</b> para ativação/desativação. 
+                    Isso permite maior flexibilidade no controle de circuitos digitais.</p>`
+            };
+            return texts[page] || "";
+        }
+    </script>
+</body>
 </html>
