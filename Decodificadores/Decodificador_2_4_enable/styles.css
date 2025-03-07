@@ -21,8 +21,7 @@ body {
 /* Contêiner principal para input e output */
 .input_Output {
     display: flex; /* Coloca input e output lado a lado */
-    justify-content: space-between; /* Espaço entre input e output */
-    gap: 20px; /* Espaçamento entre input e output */
+    justify-content: center;
 }
 
 /* Estilo para o contêiner de input */
@@ -30,18 +29,29 @@ body {
     display: flex;
     flex-direction: column; /* Organiza os botões em coluna */
     align-items: center; /* Centraliza os botões horizontalmente */
-    gap: 50px; /* Espaçamento entre os botões */
-    margin-top: 100px;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 25px;
 }
 
-.inputs button {
-    padding: 10px 20px;
+.inputE button {
+    padding: 5px 20px;
     border: none;
     border-radius: 4px;
     background-color: #007bff;
     color: white;
     cursor: pointer;
-    width: 100px; /* Largura fixa para os botões */
+    width: 70px;
+    margin-left: 90px;
+}
+
+.inputs button {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 70px; /* Largura fixa para os botões */
 }
 
 .inputs button.active {
@@ -50,10 +60,11 @@ body {
 
 /* Estilo para o contêiner de output */
 .outputs {
+    margin-top: 30px;
     display: flex;
     flex-direction: column; /* Organiza as luzes em coluna */
     align-items: center; /* Centraliza as luzes horizontalmente */
-    gap: 10px; /* Espaçamento entre as luzes */
+    gap: 40px; /* Espaçamento entre as luzes */
 }
 
 .light {
@@ -71,3 +82,8 @@ body {
     background-color: yellow;
 }
 
+.circuit-output img {
+    width: 450px;  
+    height: auto; 
+    display: block;
+}
