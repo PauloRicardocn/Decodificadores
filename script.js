@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         switch (page) {
             case "decodificador2x4":
-                loadStyle("/Decodificadores/components.css");
+                loadStyle("./Decodificadores/components.css");
                 content.innerHTML = `
                     <div class="container">
                         <h1>Decodificador 2 para 4 com Portas Lógicas</h1>
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
 
             case "decodificador3x8":
-                loadStyle("/Decodificadores/styles 2.css");
+                loadStyle("./Decodificadores/styles 2.css");
                 content.innerHTML = `
                     <div class="container">
                         <h1>Decodificador 3 para 8 com Portas Lógicas</h1>
