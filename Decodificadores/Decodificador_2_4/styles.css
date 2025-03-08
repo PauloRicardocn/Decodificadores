@@ -5,18 +5,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
 }
 
 .container {
     background-color: #fff;
-    width: 1000px;
+    width: 900px;
     padding: 40px 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: justify;
     align-items: center;
+    justify-content: center;
     position: relative;
     display: flex;
     gap: 14px;

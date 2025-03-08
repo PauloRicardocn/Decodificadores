@@ -20,7 +20,7 @@ body {
 }
 
 .sidebar {
-    width: 24vh;
+    width: 46vh;
     background-color: #e2e2e2;
     display: flex;
     justify-content: center;
@@ -29,12 +29,12 @@ body {
 }
 
 .sidebar-bottom {
-    width: 24vh;
+    width: 46vh;
     background-color: #e2e2e2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     padding-top: 20px;
     height: 7vh;
 }
@@ -43,12 +43,13 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .sidebar ul li a {
     display: block;
     color: rgb(0, 0, 0);
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     justify-content: center;
     text-decoration: none;
@@ -60,12 +61,6 @@ body {
 
 .sidebar ul li a:hover {
     background-color: #a1a1a1;
-}
-
-.main-content {
-    display: flex;
-    width: calc(100% - 24vh);
-    flex-direction: column;
 }
 
 header {
@@ -97,14 +92,21 @@ header {
     flex-direction: row;
 }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: calc(100% - 46vh);
+}
+
 .menu-item-header:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra simples */
 }
 
 .content {
-    padding: 20px;
     background-color: white;
-    flex-grow: 1;
 }
 
 @media (max-width: 768px) {
