@@ -11,7 +11,7 @@ body {
 
 .container {
     background-color: #fff;
-    width: 850px;
+    width: 900px;
     padding: 40px 40px;
     align-items: center;
     display: flex;
@@ -51,7 +51,7 @@ h1 {
     color: white;
     cursor: pointer;
     width: 70px;
-    margin-left: 90px;
+    margin-left: 285px;
 }
 
 .inputs button {

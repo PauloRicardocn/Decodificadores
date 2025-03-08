@@ -12,6 +12,7 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="./Decodificadores/components.css">
 </head>
+
 <body onload="loadHome()">
     <div class="wrapper">
         <header>
@@ -36,12 +37,10 @@
                         <li><a href="#" onclick="loadDecodificador('Decodificadores/Decodificador_3_8_enable/index.html')">Decodificador (3:8) Enable</a></li>
                     </ul>
                 </div>
-
-                
             </div>
 
             <div class="main-content">
-                <div id="info-container" style="padding: 20px; font-family: Arial, sans-serif;"></div>
+                <div id="info-container" style="margin-top: 0vh; font-family: Arial, sans-serif;"></div>
                 <iframe id="decodificador-frame" src="" style="width: 100%; height: 90vh; border: none;"></iframe>
             </div>
         </div>
@@ -54,6 +53,7 @@
         }
 
         function loadHome() {
+            loadDecodificador(-1);
             document.getElementById('decodificador-frame').src = "";
             document.getElementById('info-container').innerHTML = `<div style="text-align: center; padding: 20px; font-family: Arial, sans-serif;">
                 <h2 style="color: #b40d0d;">Bem-vindo ao Simulador de Decodificadores!</h2>
